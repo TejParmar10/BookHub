@@ -70,7 +70,7 @@ include 'header.php';
                     <div class="col-lg-12">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center">
-                                <li class="breadcrumb-item"><a href="trial.php">Home</a></li>
+                                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                                 <li class="breadcrumb-item"><a href="shop.php">Books</a></li> 
                                 <li class="breadcrumb-item"><a href=""><?php echo $row['product_name'];?></a></li> 
                             </ol>

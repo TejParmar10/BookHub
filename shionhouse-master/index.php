@@ -1,4 +1,5 @@
 <?php
+session_start();
  include 'header.php';
 ?>
     <main>
@@ -173,7 +174,7 @@
                                                         <h2 class="card-title"><?php echo $row['product_name'];?></h2>
                                                     <h4 class="card-title"><?php echo "Rs.".$row['product_price'];?></h4>
                                                             <p>
-                                                                <a class="brand-text " href="book_details.php?id=<?php echo $row['id']?>" 
+                                                                <a class="brand-text " href="books_detail.php?id=<?php echo $row['id']?>" 
                                                                 style="color:#f44242 ;align-content: flex-end;" >View Details</a>
                                                             </p>                                          
                                           </div>
@@ -195,6 +196,8 @@
                     <div class="room-btn">
                         <a href="shop.php" class="border-btn">Browse More</a>
                     </div>
+                    <h5>User is:<?php echo $_SESSION['id'];?></h5>
+                    
                 </div>
             </div>
         </div>

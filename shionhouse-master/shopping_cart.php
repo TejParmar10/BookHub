@@ -19,8 +19,6 @@ if (!empty($_GET['action'])) {
                             'quantity' => $_POST['quantity'],
                             'price' => $product['product_price'],
                             'image' => $product['product_image']
-
-                            
                         ]
                     ];
                     if (isset($_SESSION['cart_item']) &&!empty($_SESSION['cart_item'])) {
@@ -130,9 +128,8 @@ table ,thead, tr,th{
                     <div class="col-lg-12">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center">
-                                <li class="breadcrumb-item"><a href="trial.php">Home</a></li>
-                                <li class="breadcrumb-item"><a href="clutches.php">Shopping_cart</a></li> 
-                                 
+                                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                                <li class="breadcrumb-item"><a href="shop.php">Shopping Cart</a></li> 
                             </ol>
                         </nav>
                     </div>
@@ -147,7 +144,10 @@ table ,thead, tr,th{
         <h1>Shopping Cart</h1>
         <hr class="new4">
         <div class="a-right">
+        <!-- if table is empty -->
         <a class="brand-text" href="shopping_cart.php?action=empty" style="color:#f44245 ">Empty Cart</a><br><br>
+        <!-- else dont display -->
+    
         </div>
     <div class="row">
         <?php
@@ -159,7 +159,6 @@ table ,thead, tr,th{
             <tr>
                 <th class="text-left">Image</th>
                 <th class="text-left">Name</th>
-  
                 <th class="text-right">Quantity</th>
                 <th class="text-right">Item price</th>
                 <th class="text-right">Price</th>
@@ -186,9 +185,10 @@ table ,thead, tr,th{
                     </tr>
 
                     <?php
-                    $total_quantity += $item["quantity"];
+                    $total_quantity+= $item["quantity"];
                     $total_price += ($item["price"]*$item["quantity"]);
                 }
+                $_SESSION['total_price']=$total_price;
             }
 
             if (isset($_SESSION['cart_item']) && !empty($_SESSION['cart_item'])){

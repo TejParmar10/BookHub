@@ -1,5 +1,5 @@
 <?php
-
+// session_start();
 require_once('./php/component.php');
 
 ?>
@@ -66,18 +66,14 @@ require_once('./php/component.php');
                                         <li><a href="shop.php">shop</a></li>
                                         <li><a href="about.php">About</a></li>
                                         <li><a href="contact.php">Contact</a></li>
-                                        <li><a href="login.php">Login</a></li>
+                                        <li><a href="login_design.php">Login</a></li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
                         <div class="header-right1 d-flex align-items-center">
-                            <!-- Social -->
-                            <div class="header-social d-none d-md-block">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                            </div>
+                            <!-- Social --> 
+                           <h5><?php echo $_SESSION['username']?></h5>
                             <!-- Search Box -->
                             <div class="search d-none d-md-block">
                                 <ul class="d-flex align-items-center">
@@ -88,8 +84,10 @@ require_once('./php/component.php');
                                     </li>
                                     <li>
                                         <div class="card-stor">
-                                            <img src="assets/img/gallery/card.svg" alt="">
-                                            <span>0</span>
+                                            <a href="shopping_cart.php">
+                                                <img src="assets/img/gallery/card.svg" alt="">
+                                            <!-- <span>0</span> -->
+                                            </a>
                                         </div>
                                     </li>
                                 </ul>
