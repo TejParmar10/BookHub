@@ -1,10 +1,10 @@
 <?php
-// session_start();
+session_start();
 require_once('./php/component.php');
 
 ?>
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="zxx"> 
 
 <head>
     <meta charset="utf-8">
@@ -31,6 +31,18 @@ require_once('./php/component.php');
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- <link rel="stylesheet" href="shop_style.css"> -->
+<style>
+    #welcome{
+        margin-right:20px;
+    color: #1D2547;
+    font-weight: 500;
+    padding: 39px 19px;
+    display: block;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    }
+
+    </style>
 
 </head>
 
@@ -73,15 +85,11 @@ require_once('./php/component.php');
                         </div>
                         <div class="header-right1 d-flex align-items-center">
                             <!-- Social --> 
-                           <h5><?php echo $_SESSION['username']?></h5>
+                           <h5 id="welcome"><?php echo $_SESSION['username']?></h5>
                             <!-- Search Box -->
                             <div class="search d-none d-md-block">
                                 <ul class="d-flex align-items-center">
-                                    <li class="mr-15">
-                                        <div class="nav-search search-switch">
-                                            <i class="ti-search"></i>
-                                        </div>
-                                    </li>
+                                   
                                     <li>
                                         <div class="card-stor">
                                             <a href="shopping_cart.php">
