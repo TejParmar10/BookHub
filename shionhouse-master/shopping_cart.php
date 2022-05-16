@@ -1,7 +1,6 @@
 <?php
-// session_start();
-require_once 'connect.php';
-
+include 'header.php';
+include 'connect.php';
 // add, remove, empty
 if (!empty($_GET['action'])) {
     switch ($_GET['action']) {
@@ -57,11 +56,6 @@ if (!empty($_GET['action'])) {
             break;
     }
 }
-
-
-?>
-<?php
-include 'header.php';
 ?>
 <!doctype html>
 <html lang="en">

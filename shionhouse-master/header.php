@@ -85,7 +85,7 @@ require_once('./php/component.php');
                         </div>
                         <div class="header-right1 d-flex align-items-center">
                             <!-- Social --> 
-                           <h5 id="welcome"><?php echo $_SESSION['username']?></h5>
+                           <h5 id="welcome">Welcome:<?php echo  $_SESSION['username']?></h5>
                             <!-- Search Box -->
                             <div class="search d-none d-md-block">
                                 <ul class="d-flex align-items-center">
